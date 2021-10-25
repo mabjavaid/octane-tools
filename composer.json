@@ -1,18 +1,23 @@
 {
     "name": "mabjavaid/octane-tools",
     "description": ":package_description",
-    "license": "license",
+    "license": "MIT",
     "authors": [
         {
-            "name": "author name",
-            "email": "author email",
-            "homepage": "author homepage"
+            "name": "Haytahm Mones",
+            "email": "haytham.mones@gmail.com",
+            "homepage": "https://www.haythammones.com"
+        },
+        {
+            "name": "Maab Javaid",
+            "email": "maabjavaid9@gmail.com"
         }
     ],
     "homepage": "https://github.com/mabjavaid/octane-tools",
     "keywords": ["Laravel", "OctaneTools"],
     "require": {
-        "illuminate/support": "~7|~8"
+        "illuminate/support": "~7|~8",
+        "phpmd/phpmd": "^2.7"
     },
     "require-dev": {
         "phpunit/phpunit": "~9.0",
