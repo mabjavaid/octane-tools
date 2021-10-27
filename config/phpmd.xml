@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         name="Laravel and similar phpmd ruleset"
+         xmlns="http://pmd.sf.net/ruleset/1.0.0"
+         xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0 http://pmd.sf.net/ruleset_xml_schema.xsd"
+         xsi:noNamespaceSchemaLocation="http://pmd.sf.net/ruleset_xml_schema.xsd">
+
+    <description>
+        Inspired by https://github.com/phpmd/phpmd/issues/137
+        using http://phpmd.org/documentation/creating-a-ruleset.html
+    </description>
+
+    <rule name="DependencyInjection"
+          since="0.2"
+          message="Define the message later."
+          class="Mabjavaid\OctaneTools\Rules\DependencyInjection"
+          externalInfoUrl="https://laravel.com/docs/8.x/octane#dependency-injection-and-octane">
+        <description>
+            <![CDATA[
+            A class with an excessive number of children is an indicator for an unbalanced
+            class hierarchy. You should consider to refactor this class hierarchy.
+            ]]>
+        </description>
+        <priority>2</priority>
+        <properties>
+            <property name="minimum" value="15" description="Maximum number of acceptable child classes."/>
+            <property name="exceptions" value="Tests\TestCase,App\Http\Controllers\Controller,Illuminate\Foundation\Http\FormRequest"/>
+        </properties>
+        <example/>
+    </rule>
+    <rule name="PotentialMemoryLeaks"
+          since="0.2"
+          message="Define the message later."
+          class="Mabjavaid\OctaneTools\Rules\PotentialMemoryLeaks"
+          externalInfoUrl="https://laravel.com/docs/8.x/octane#managing-memory-leaks">
+        <description>
+            <![CDATA[
+            A class with an excessive number of children is an indicator for an unbalanced
+            class hierarchy. You should consider to refactor this class hierarchy.
+            ]]>
+        </description>
+        <priority>2</priority>
+        <properties>
+            <property name="minimum" value="15" description="Maximum number of acceptable child classes."/>
+            <property name="exceptions" value="Tests\TestCase,App\Http\Controllers\Controller,Illuminate\Foundation\Http\FormRequest"/>
+        </properties>
+        <example/>
+    </rule>
+</ruleset>
