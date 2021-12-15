@@ -15,35 +15,35 @@
           message="Define the message later."
           class="Mabjavaid\OctaneTools\Rules\DependencyInjection"
           externalInfoUrl="https://laravel.com/docs/8.x/octane#dependency-injection-and-octane">
-        <description>
-            <![CDATA[
-            A class with an excessive number of children is an indicator for an unbalanced
-            class hierarchy. You should consider to refactor this class hierarchy.
-            ]]>
-        </description>
-        <priority>2</priority>
-        <properties>
-            <property name="minimum" value="15" description="Maximum number of acceptable child classes."/>
-            <property name="exceptions" value="Tests\TestCase,App\Http\Controllers\Controller,Illuminate\Foundation\Http\FormRequest"/>
-        </properties>
-        <example/>
+<!--        <description>-->
+<!--            <![CDATA[-->
+<!--            A class with an excessive number of children is an indicator for an unbalanced-->
+<!--            class hierarchy. You should consider to refactor this class hierarchy.-->
+<!--            ]]>-->
+<!--        </description>-->
+<!--        <priority>2</priority>-->
+<!--        <properties>-->
+<!--            <property name="minimum" value="15" description="Maximum number of acceptable child classes."/>-->
+<!--            <property name="exceptions" value="Tests\TestCase,App\Http\Controllers\Controller,Illuminate\Foundation\Http\FormRequest"/>-->
+<!--        </properties>-->
+<!--        <example/>-->
     </rule>
-    <rule name="PotentialMemoryLeaks"
-          since="0.2"
-          message="Define the message later."
-          class="Mabjavaid\OctaneTools\Rules\PotentialMemoryLeaks"
-          externalInfoUrl="https://laravel.com/docs/8.x/octane#managing-memory-leaks">
-        <description>
-            <![CDATA[
-            A class with an excessive number of children is an indicator for an unbalanced
-            class hierarchy. You should consider to refactor this class hierarchy.
-            ]]>
-        </description>
-        <priority>2</priority>
-        <properties>
-            <property name="minimum" value="15" description="Maximum number of acceptable child classes."/>
-            <property name="exceptions" value="Tests\TestCase,App\Http\Controllers\Controller,Illuminate\Foundation\Http\FormRequest"/>
-        </properties>
-        <example/>
-    </rule>
+<!--    <rule name="PotentialMemoryLeaks"-->
+<!--          since="0.2"-->
+<!--          message="Define the message later."-->
+<!--          class="Mabjavaid\OctaneTools\Rules\PotentialMemoryLeaks"-->
+<!--          externalInfoUrl="https://laravel.com/docs/8.x/octane#managing-memory-leaks">-->
+<!--        <description>-->
+<!--            <![CDATA[-->
+<!--            A class with an excessive number of children is an indicator for an unbalanced-->
+<!--            class hierarchy. You should consider to refactor this class hierarchy.-->
+<!--            ]]>-->
+<!--        </description>-->
+<!--        <priority>2</priority>-->
+<!--        <properties>-->
+<!--            <property name="minimum" value="15" description="Maximum number of acceptable child classes."/>-->
+<!--            <property name="exceptions" value="Tests\TestCase,App\Http\Controllers\Controller,Illuminate\Foundation\Http\FormRequest"/>-->
+<!--        </properties>-->
+<!--        <example/>-->
+<!--    </rule>-->
 </ruleset>

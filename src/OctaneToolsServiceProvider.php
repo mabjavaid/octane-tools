@@ -3,6 +3,7 @@
 namespace Mabjavaid\OctaneTools;
 
 use Illuminate\Support\ServiceProvider;
+use Mabjavaid\OctaneTools\Commands\CodeCheckCommand;
 
 class OctaneToolsServiceProvider extends ServiceProvider
 {
@@ -77,6 +78,6 @@ class OctaneToolsServiceProvider extends ServiceProvider
         ], 'octane-tools.views');*/
 
         // Registering package commands.
-        // $this->commands([]);
+        $this->commands([CodeCheckCommand::class]);
     }
 }
