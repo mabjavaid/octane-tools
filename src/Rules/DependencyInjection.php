@@ -5,11 +5,9 @@ namespace Mabjavaid\OctaneTools\Rules;
 use Illuminate\Support\Str;
 use PHPMD\AbstractNode;
 use PHPMD\AbstractRule;
-use PHPMD\Node\ClassNode;
 use PHPMD\Rule\ClassAware;
 use PHPMD\Rule\FunctionAware;
 use PHPMD\Rule\MethodAware;
-use PDepend\Source\AST\ASTMethod;
 
 class DependencyInjection extends AbstractRule implements MethodAware, ClassAware, FunctionAware
 {
