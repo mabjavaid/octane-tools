@@ -9,7 +9,7 @@ use PHPMD\Rule\ClassAware;
 use PHPMD\Rule\FunctionAware;
 use PHPMD\Rule\MethodAware;
 
-class DependencyInjection extends AbstractRule implements MethodAware, ClassAware, FunctionAware
+class DependencyInjection extends AbstractRule implements FunctionAware, MethodAware, ClassAware
 {
     public function apply(AbstractNode $node)
     {
@@ -17,11 +17,15 @@ class DependencyInjection extends AbstractRule implements MethodAware, ClassAwar
             return;
         }
 
-        $nodes = $node->findChildrenOfType('Literal');
+        $nodes = $node->findChildrenOfType('MethodPostfix');
+        foreach ($nodes as $node) {
+            $identifier = $node->getFirstChildOfType('Identifier');
+            if (!$identifier) {
+                continue;
+            }
 
-        foreach ($nodes as $methodCall) {
-            if (Str::contains(json_encode($methodCall), 'singelton')) {
-                $this->addViolation($methodCall);
+            if ($identifier->getName() === 'singleton') {
+                $this->addViolation($node);
             }
         }
     }
