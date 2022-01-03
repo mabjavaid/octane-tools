@@ -23,9 +23,12 @@ class DependencyInjection extends AbstractRule implements FunctionAware, MethodA
             if (!$identifier) {
                 continue;
             }
-
             if ($identifier->getName() === 'singleton') {
-                $this->addViolation($node);
+                $closure = $node->getFirstChildOfType('Closure');
+                $parameter = $closure->getFirstChildOfType('FormalParameters');
+                if ($parameter->getFirstChildOfType('VariableDeclarator')) {
+                    $this->addViolation($node);
+                }
             }
         }
     }

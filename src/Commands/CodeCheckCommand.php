@@ -18,10 +18,8 @@ class CodeCheckCommand extends Command
     public function handle()
     {
         $this->runPhpMd();
-
         if ($this->hasFailed()) {
             echo $this->getErrorOutput();
-
             $this->error('Clean code checks failed.');
 
             return self::EXIT_CODE_ERROR;
@@ -55,7 +53,7 @@ class CodeCheckCommand extends Command
 
     private function getErrorOutput(): string
     {
-        return implode(PHP_EOL . PHP_EOL, $this->errorOutput);
+        return implode(PHP_EOL . PHP_EOL, array_unique(explode(PHP_EOL , $this->errorOutput[0])));
     }
 
     private function runCustomCommand(string $command)

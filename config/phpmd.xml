@@ -12,15 +12,15 @@
 
     <rule name="DependencyInjection"
           since="0.2"
-          message="Define the message later."
+          message="Be aware that if you are app instance in singleton then it should be pass like this"
           class="Mabjavaid\OctaneTools\Rules\DependencyInjection"
           externalInfoUrl="https://laravel.com/docs/8.x/octane#dependency-injection-and-octane">
-<!--        <description>-->
-<!--            <![CDATA[-->
-<!--            A class with an excessive number of children is an indicator for an unbalanced-->
-<!--            class hierarchy. You should consider to refactor this class hierarchy.-->
-<!--            ]]>-->
-<!--        </description>-->
+        <description>
+            <![CDATA[
+            A class with an excessive number of children is an indicator for an unbalanced
+            class hierarchy. You should consider to refactor this class hierarchy.
+            ]]>
+        </description>
 <!--        <priority>2</priority>-->
 <!--        <properties>-->
 <!--            <property name="minimum" value="15" description="Maximum number of acceptable child classes."/>-->
