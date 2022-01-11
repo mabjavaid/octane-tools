@@ -2,7 +2,6 @@
 
 namespace Mabjavaid\OctaneTools\Rules;
 
-use Illuminate\Support\Str;
 use PHPMD\AbstractNode;
 use PHPMD\AbstractRule;
 use PHPMD\Rule\ClassAware;
@@ -13,14 +12,14 @@ class DependencyInjection extends AbstractRule implements FunctionAware, MethodA
 {
     public function apply(AbstractNode $node)
     {
-        if (!$this->isProvider($node)) {
+        if (! $this->isProvider($node)) {
             return;
         }
 
         $nodes = $node->findChildrenOfType('MethodPostfix');
         foreach ($nodes as $node) {
             $identifier = $node->getFirstChildOfType('Identifier');
-            if (!$identifier) {
+            if (! $identifier) {
                 continue;
             }
             if ($identifier->getName() === 'singleton') {
@@ -35,6 +34,6 @@ class DependencyInjection extends AbstractRule implements FunctionAware, MethodA
 
     private function isProvider(AbstractNode $node): bool
     {
-        return preg_match("#app/Providers#", $node->getFileName());
+        return preg_match('#app/Providers#', $node->getFileName());
     }
 }

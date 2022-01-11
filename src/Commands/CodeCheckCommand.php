@@ -53,7 +53,7 @@ class CodeCheckCommand extends Command
 
     private function getErrorOutput(): string
     {
-        return implode(PHP_EOL . PHP_EOL, array_unique(explode(PHP_EOL , $this->errorOutput[0])));
+        return implode(PHP_EOL.PHP_EOL, array_unique(explode(PHP_EOL, $this->errorOutput[0])));
     }
 
     private function runCustomCommand(string $command)
@@ -62,7 +62,7 @@ class CodeCheckCommand extends Command
         $process->setTimeout(config('octane-tools.timeout'));
         $process->run();
 
-        if (!$process->isSuccessful()) {
+        if (! $process->isSuccessful()) {
             $this->markAsFailed($process);
         }
     }
