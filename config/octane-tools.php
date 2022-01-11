@@ -7,5 +7,5 @@ return [
         'dirs' => ['app', 'routes'],
         'exclude' => ['database/seeds', 'database', 'config'],
         'config-file' => __DIR__.'/phpmd.xml',
-    ]
+    ],
 ];
